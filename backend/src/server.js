@@ -7,7 +7,7 @@ const app = express();
 connectDB();
 
 app.get('/' , (req,res) => {
-    res.send('Hello from server')
+    res.send('Hello from X server')
 })
 
 app.listen(ENV.PORT, ()=> console.log('Server is running on port', ENV.PORT));
