@@ -39,3 +39,12 @@ export const syncUser = asynchandler(async (req, res) => {
     const user = await User.create(userData);
     res.status(201).json({message:"User created successfully", user});
 });
+
+export const getCurrentUser = asynchandler(async (req, res) => {
+    const {userId} = getAuth(req);
+    const user = await User.findOne({clerkId: userId});
+    if(!user){
+        return res.status(404).json({ message: "User not found" });
+    }
+    res.status(200).json({user});
+});

@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get("/profile/:username", getUserProfile);
 router.post("/sync", protectedRoute, syncUser);
+router.post("/me", protectedRoute, getCurrentUser);
 router.put("/profile", protectedRoute, updateProfile);
 
 export default router;
