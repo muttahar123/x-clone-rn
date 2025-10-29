@@ -1,4 +1,4 @@
-import { asynchandler } from "express-async-handler";
+import asynchandler  from "express-async-handler";
 import User from "../models/user.model.js";
 import Notification from "../models/notification.model.js";
 import { clerkClient, getAuth } from "@clerk/express";
