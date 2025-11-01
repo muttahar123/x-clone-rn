@@ -18,6 +18,7 @@ app.get('/' , (req,res) => {
 
 app.use('/api/users', userRoutes);
 app.use("/api/posts", postRoutes);
+app.use('/api/comments', commentRoutes);
 
 //error handling middleware
 app.use((err, req, res, next) => {
