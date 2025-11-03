@@ -22,6 +22,8 @@ app.use('/api/users', userRoutes);
 app.use("/api/posts", postRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/uploads', express.static('uploads'));
+
 
 //error handling middleware
 app.use((err, req, res, next) => {
