@@ -24,7 +24,7 @@ app.use('/api/users', userRoutes);
 app.use("/api/posts", postRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/notifications', notificationRoutes);
-app.use('/uploads', express.static('uploads'));
+
 
 
 //error handling middleware
@@ -37,14 +37,11 @@ const startServer = async () => {
     try {
         await connectDB();
 
-        const server = app.listen(ENV.PORT, () => {
-            console.log(`Server is running on port ${ENV.PORT}`);
-        });
+        // listen for local development only
+if(ENV.NODE_ENV !== "production"){
+    app.listen(ENV.PORT, () => console.log(`Server is running on port ${ENV.PORT}`));
+}
 
-        server.on('error', (error) => {
-            console.error('Failed to start server', error);
-            process.exit(1);
-        });
     } catch (error) {
         console.error('Failed to connect to the database', error);
         process.exit(1);
@@ -52,3 +49,6 @@ const startServer = async () => {
 }; 
 
 startServer();
+
+//export for vercel
+export default app;
