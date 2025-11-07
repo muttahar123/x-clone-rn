@@ -10,6 +10,9 @@ export default function Index() {
       }}
     >
       <Text>Twitter X clone in react native</Text>
+      <Text style={{ textAlign: "center", marginTop: 10 }}>
+        Welcome to the Twitter X clone app!
+      </Text>
     </View>
   );
 }
