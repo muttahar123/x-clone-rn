@@ -14,7 +14,8 @@ export const getNotifications = asyncHandler(async (req, res) => {
         .sort({ createdAt: -1 })
         .populate("from", "username firstName lastName profilepicture")
         .populate("post", "content image")
-        .populate("comment", "content");
+        .populate("comment", "content")
+        .lean();
 
     res.status(200).json({ notifications });
 });

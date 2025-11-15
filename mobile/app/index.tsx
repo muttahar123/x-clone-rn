@@ -10,6 +10,7 @@ export default function Index() {
       }}
     >
       <Text>Twitter X clone in react native</Text>
+      
     </View>
   );
 }
