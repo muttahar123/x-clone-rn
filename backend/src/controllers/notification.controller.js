@@ -15,8 +15,6 @@ export const getNotifications = asyncHandler(async (req, res) => {
         .populate("from", "username firstName lastName profilepicture")
         .populate("post", "content image")
         .populate("comment", "content");
-
-
     res.status(200).json({ notifications });
 });
 
