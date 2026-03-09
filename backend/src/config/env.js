@@ -1,4 +1,6 @@
 import dotenv from 'dotenv';
+import setupDNS from './dns.js';
+setupDNS();
 
 dotenv.config();
 
