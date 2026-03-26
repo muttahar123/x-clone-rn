@@ -5,8 +5,9 @@ export default function Index() {
   return (
      <View className="flex-1 items-center justify-center bg-white">
       <Text className="text-xl font-bold text-red-500">
-        X clone 
+        X clone rn
       </Text>
+      <TextInput placeholder="haha"></TextInput>
     </View>
   );
 }
