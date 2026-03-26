@@ -1,5 +1,4 @@
 import { Text, TextInput, View } from "react-native";
-import {Ionicons} from "@expo/vector-icons";
 
 export default function Index() {
   return (
@@ -7,7 +6,6 @@ export default function Index() {
       <Text className="text-xl font-bold text-red-500">
         X clone rn
       </Text>
-      <TextInput placeholder="haha"></TextInput>
     </View>
   );
 }
