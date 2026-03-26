@@ -1,9 +1,19 @@
-import { Text, View } from "react-native";
+import { Text, View, Image } from "react-native";
 
 export default function Index() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-red-500">Auth page</Text>
+    <View className="flex-1 bg-white">
+     <View className="flex-1 px-8 justify-between">
+      <View className="flex-1 justify-between">
+
+{/* DEMO IMAGE  */}
+<View className="items-center">
+<Image 
+  source={require("../../assets/images/auth2.png")}
+/>
+</View>
+      </View>
+     </View>
     </View>
   );
 }
