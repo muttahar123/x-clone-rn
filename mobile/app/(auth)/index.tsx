@@ -7,7 +7,7 @@ export default function Index() {
       <View className="flex-1 justify-between">
 
 {/* DEMO IMAGE  */}
-<View className="items-center">
+<View className="items-center h-3/5">
 <Image 
   source={require("../../assets/images/auth2.png")}
 />
